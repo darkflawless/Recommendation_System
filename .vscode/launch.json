@@ -1,0 +1,91 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "UserHistoryService2Application",
+            "request": "launch",
+            "mainClass": "com.example.user_history_service_2.UserHistoryService2Application",
+            "projectName": "user_history_service_2"
+        },
+        {
+            "type": "java",
+            "name": "ProductServiceApplication",
+            "request": "launch",
+            "mainClass": "com.example.product_service.ProductServiceApplication",
+            "projectName": "product_service",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=61321 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=product_service"
+        },
+        {
+            "type": "java",
+            "name": "GatewayServiceApplication",
+            "request": "launch",
+            "mainClass": "com.example.gateway_service.GatewayServiceApplication",
+            "projectName": "gateway_service",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=53410 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=gateway_service"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UserServiceApplication<user_service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.user_service.UserServiceApplication",
+            "projectName": "user_service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=50132 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=user_service"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-TrackingServiceApplication<tracking_service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.tracking_service.TrackingServiceApplication",
+            "projectName": "tracking_service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=50501 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=tracking_service"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UserHistoryServiceApplication<user_history_service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.user_history_service.UserHistoryServiceApplication",
+            "projectName": "user_history_service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=61769 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=user_history_service"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-StatisticServiceApplication<statistic_service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.statistic_service.StatisticServiceApplication",
+            "projectName": "statistic_service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-RecommendServiceApplication<recommend_service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.recommend_service.RecommendServiceApplication",
+            "projectName": "recommend_service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=62313 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=recommend_service"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-OrderServiceApplication<order_service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.order_service.OrderServiceApplication",
+            "projectName": "order_service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
