@@ -86,7 +86,7 @@ public class RecommendationProductStatsController {
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate) {
 
-        log.info("day la ham lay thong ke hang ngay cua 1 san pham trong 1 khoang thoi gian");
+        log.info("day la ham lay thong ke hang ngay cua 1 san pham trong 1 khoang");
         if (isInvalidRange(startDate, endDate)) {
             return ResponseEntity.badRequest().build();
         }

@@ -2,10 +2,24 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DemoApplication",
+            "request": "launch",
+            "mainClass": "com.example.login.DemoApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "AuthServiceApplication",
+            "request": "launch",
+            "mainClass": "com.taskboard.auth.AuthServiceApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "UserHistoryService2Application",
             "request": "launch",
-            "mainClass": "com.example.user_history_service_2.UserHistoryService2Application",
-            "projectName": "user_history_service_2"
+            "mainClass": "com.example.core.UserHistoryService2Application",
+            "projectName": "core"
         },
         {
             "type": "java",
@@ -64,7 +78,8 @@
             "mainClass": "com.example.statistic_service.StatisticServiceApplication",
             "projectName": "statistic_service",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=56502 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=statistic_service"
         },
         {
             "type": "java",

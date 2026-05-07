@@ -27,7 +27,7 @@ export async function fetchPagedProducts({
   return response.json()
 }
 
-export async function fetchAllTimeProducts({ limit = 20, sortType = 'TOP_VIEW' } = {}) {
+export async function fetchAllTimeProducts({ limit = 10, sortType = 'TOP_VIEW' } = {}) {
   const params = new URLSearchParams({
     limit: String(limit),
     sortType,
