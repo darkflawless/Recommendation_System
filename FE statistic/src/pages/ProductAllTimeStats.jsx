@@ -152,7 +152,7 @@ function ProductAllTimeStats() {
             type="text"
             value={searchKeyword}
             onChange={(e) => setSearchKeyword(e.target.value)}
-            placeholder="Nhap ten hoac ID..."
+            placeholder="Nhap ten"
             disabled={loadingProducts || products.length === 0}
           />
         </label>

@@ -67,18 +67,18 @@ public class RecommendationProductStatsService {
         Query query = Query.query(Criteria.where("statDate").is(statDate)
                 .and("productId").is(productId));
 
-            
-                Update update = new Update()
+        RecommendationProductDailyStats existing = mongoTemplate.findOne(query, RecommendationProductDailyStats.class);
+
+        Update update = new Update()
                 .setOnInsert("id", statDate + "_" + productId)
                 .setOnInsert("statDate", statDate)
                 .setOnInsert("productId", productId)
-                .setOnInsert("productName", "Unknown")
                 .inc("totalViews", 1);
-                
-        RecommendationProductDailyStats existing = mongoTemplate.findOne(query, RecommendationProductDailyStats.class);
 
         if (productName != null && !productName.isBlank()) {
             update.set("productName", productName);
+        } else if (existing == null) {
+            update.setOnInsert("productName", "Unknown");
         }
         
         if (existing == null || existing.getTotalRecommendations() <= 0) {

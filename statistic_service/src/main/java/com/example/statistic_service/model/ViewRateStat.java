@@ -10,6 +10,6 @@ public interface ViewRateStat {
         if (getTotalRecommendations() <= 0) {
             return 0.0;
         }
-        return (getTotalViews() * 100.0) / getTotalRecommendations();
+        return Math.max(1,(getTotalViews() * 100.0) / getTotalRecommendations());
     }
 }

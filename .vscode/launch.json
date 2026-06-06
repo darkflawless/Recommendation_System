@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "UserHistoryService2Application",
+            "request": "launch",
+            "mainClass": "com.example.core.UserHistoryService2Application",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "DemoApplication",
             "request": "launch",
             "mainClass": "com.example.login.DemoApplication",
@@ -99,6 +106,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.example.order_service.OrderServiceApplication",
             "projectName": "order_service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BusinessApplication<core>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.core.BusinessApplication",
+            "projectName": "core",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }

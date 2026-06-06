@@ -10,21 +10,22 @@
         <module name="common" />
         <module name="gateway_service" />
       </profile>
-      <profile name="Annotation profile for core" enabled="true">
+      <profile name="Annotation profile for statistic_service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.44/lombok-1.18.44.jar" />
         </processorPath>
-        <module name="core" />
         <module name="statistic_service" />
+        <module name="core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common.main" target="21" />
       <module name="common.test" target="21" />
       <module name="user_history_service" target="21" />
+      <module name="user_history_service_2" target="21" />
       <module name="user_service" target="21" />
     </bytecodeTargetLevel>
   </component>
@@ -33,10 +34,10 @@
       <module name="common" options="-parameters" />
       <module name="common.main" options="-parameters" />
       <module name="common.test" options="-parameters" />
+      <module name="core" options="-parameters" />
       <module name="gateway_service" options="-parameters" />
       <module name="statistic_service" options="-parameters" />
       <module name="user_history_service" options="-parameters" />
-      <module name="core" options="-parameters" />
       <module name="user_service" options="-parameters" />
     </option>
   </component>

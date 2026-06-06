@@ -4,20 +4,24 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.example.common.model.ClickEvent;
-import org.example.common.model.ImpressionEvent;
-import org.example.common.model.OrderEvent;
-import org.example.common.model.SearchEvent;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.example.common.model.ClickEvent;
+import org.example.common.model.ImpressionEvent;
+import org.example.common.model.OrderEvent;
+import org.example.common.model.SearchEvent;
 
 import com.example.tracking_service.service.TrackingEventPublisher;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
+@Slf4j
 @RequestMapping("/tracking/events")
 public class TrackingEventController {
 
@@ -34,7 +38,10 @@ public class TrackingEventController {
     }
 
     @PostMapping("/click")
+
     public ResponseEntity<Map<String, Object>> publishClick(@RequestBody ClickEvent event) {
+
+        log.info("Nhận click event: User={}, Product={}, Category={}", event.getUserId(), event.getProductId(), event.getCategoryName());
         trackingEventPublisher.publishClick(event);
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(buildResponse("CLICK", event.getId()));
     }

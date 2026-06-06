@@ -5,7 +5,6 @@ import com.example.statistic_service.service.RecommendationProductStatsService;
 import org.example.common.model.ClickEvent;
 import org.example.common.model.ImpressionEvent;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component

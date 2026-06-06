@@ -3,6 +3,10 @@ package org.example.common.model;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import lombok.Data;
+
+
+@Data
 public class ImpressionEvent {
     private String id;
     private Long userId;
@@ -28,51 +32,5 @@ public class ImpressionEvent {
         this.createdAt = createdAt;
     }
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public String getRecommendationSessionId() {
-        return recommendationSessionId;
-    }
-
-    public void setRecommendationSessionId(String recommendationSessionId) {
-        this.recommendationSessionId = recommendationSessionId;
-    }
-
-    public List<Long> getDisplayedProductIds() {
-        return displayedProductIds;
-    }
-
-    public void setDisplayedProductIds(List<Long> displayedProductIds) {
-        this.displayedProductIds = displayedProductIds;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
 }

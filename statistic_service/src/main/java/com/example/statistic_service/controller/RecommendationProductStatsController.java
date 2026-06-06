@@ -40,7 +40,7 @@ public class RecommendationProductStatsController {
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate,
             @RequestParam(defaultValue = "0") @Min(0) int page,
-            @RequestParam(defaultValue = "10") @Min(1) @Max(20) int size,
+            @RequestParam(defaultValue = "15") @Min(1) @Max(20) int size,
             @RequestParam(defaultValue = "TOP_VIEW") SortType sortType) {
         if (isInvalidRange(startDate, endDate)) {
             return ResponseEntity.badRequest().build();
